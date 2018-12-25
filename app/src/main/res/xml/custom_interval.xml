@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_t_battery_level_interval">
+
+        <PreferenceScreen
+            android:key="batteryLevelInterval1"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval2"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval3"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval4"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval5"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval6"
+            />
+        <PreferenceScreen
+            android:key="batteryLevelInterval7"
+            />
+
+        <PreferenceScreen
+            android:summary="@string/battery_level_s_default_battery_level_interval"
+            android:title="@string/battery_level_t_default_battery_level_interval"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

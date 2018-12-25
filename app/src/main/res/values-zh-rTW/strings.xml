@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">充電 LED</string>
+
+    <!-- Button label -->
+    <string name="btn_accept">接受</string>
+    <string name="btn_reject">拒絕</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_ok">確定</string>
+    <string name="btn_settings">設定</string>
+    <string name="btn_confirm">確認</string>
+    <string name="btn_retry">重試</string>
+
+    <!-- Toast message -->
+    <string name="power_connected">已連接電源</string>
+    <string name="power_disconnected">已斷連電源</string>
+    <string name="settings_not_found">找不到配置文件</string>
+    <string name="settings_imported">設定已匯入</string>
+
+    <!-- Notification Channel -->
+    <string name="channel_name_foreground_service_status">前台服務狀態</string>
+    <string name="channel_name_uncategorized">未分類</string>
+
+    <!-- Notification message -->
+    <string name="charging">充電中</string>
+    <string name="charging_completed">充電完成</string>
+    <string name="battery_level_reached">已達預設電池電量</string>
+    <string name="foreground_service_see_faq">前台服務。請參閱常見問題。</string>
+
+    <!-- Alert dialog message -->
+    <string name="alert_title_permission_denied">權限被拒絕</string>
+    <string name="alert_msg_storage_denied">沒有這個權限，該應用程式無法讀/寫存儲。你確認要拒絕授權嗎？</string>
+    <string name="alert_title_storage_denied_never_ask">無法 讀/寫 存儲</string>
+    <string name="alert_msg_storage_denied_never_ask">您已拒絕存儲許可。請轉到應用設定並允許權限。</string>
+    <string name="alert_title_ignore_battery_optimization">忽略電池優化</string>
+    <string name="alert_msg_ignore_battery_optimization">請考慮將 ChargingLED 添加到\“不優化\”名單中，否則該應用可能無法正常運行。有關詳細訊息，請參閱常見問題。</string>
+
+    <!-- General settings -->
+    <string name="pref_cat_t_settings">設定</string>
+    <!-- Monitor charging -->
+    <string name="settings_t_monitor_charging">監控充電</string>
+    <string name="settings_s_disabled">已關閉</string>
+    <string name="settings_s_enabled">已啟用</string>
+    <!-- Mode -->
+    <string name="settings_t_mode">模式</string>
+    <string name="settings_s_led">LED</string>
+    <string name="settings_s_notification">通知</string>
+    <string name="settings_s_sound">鈴聲</string>
+
+    <!-- LED settings -->
+    <string name="pref_cat_t_led_settings">LED 設定</string>
+    <!-- Charging LED -->
+    <string name="settings_t_charging_led">充電 LED</string>
+    <!-- Custom battery level interval -->
+    <string name="settings_t_battery_level_interval">電池電量的間隔</string>
+    <string name="settings_s_battery_level_interval">定義電池電量的間隔</string>
+    <!-- Reset default battery level interval -->
+    <string name="battery_level_t_default_battery_level_interval">預設的電池電量的間隔</string>
+    <string name="battery_level_s_default_battery_level_interval">重定為預設的電池電量的間隔</string>
+    <!-- Battery level colour -->
+    <string name="settings_t_battery_level_color">電池電量的色彩</string>
+    <string name="settings_s_battery_level_color">定義電池電量的色彩</string>
+    <!-- Blink rate -->
+    <string name="settings_t_blink_rate">閃爍率</string>
+    <string name="settings_s_blink_rate">定義閃爍率</string>
+
+    <!-- Custom battery level colour -->
+    <string name="battery_level_t_range_below">%s 以下</string>
+    <!-- Reset default battery level colour -->
+    <string name="battery_level_t_default_battery_level_color">預設的電池電量的色彩</string>
+    <string name="battery_level_s_default_battery_level_color">重定為預設的電池電量的色彩</string>
+
+    <!-- Custom blink rate -->
+    <string name="blink_rate_s_range_enabled">LED 閃爍</string>
+    <string name="blink_rate_s_range_disabled">LED 長亮</string>
+    <string name="blink_rate_t_range_1_on">LED 發光的間隔</string>
+    <string name="blink_rate_t_range_1_off">LED 熄滅的間隔</string>
+    <string name="blink_rate_t_range_2_on">LED 發光的間隔</string>
+    <string name="blink_rate_t_range_2_off">LED 熄滅的間隔</string>
+    <!-- Reset default blink rate -->
+    <string name="blink_rate_t_default_blink_rate">預設的閃爍率</string>
+    <string name="blink_rate_s_default_blink_rate">重定為預設的閃爍率</string>
+
+    <!-- Notification settings -->
+    <string name="pref_cat_t_notification_settings">通知設定</string>
+    <string name="settings_t_charging_notification">充電通知</string>
+
+    <!-- Sound settings -->
+    <string name="pref_cat_t_sound_settings">鈴聲設定</string>
+    <string name="settings_t_charging_sound">充電鈴聲</string>
+    <string name="settings_t_plugin_sound">連接電源的鈴聲</string>
+    <string name="settings_t_unplug_sound">斷連電源的鈴聲</string>
+    <string name="settings_t_monitor_battery_level">監控電池電量</string>
+    <string name="settings_t_battery_level">電池電量</string>
+    <string name="settings_t_battery_level_reached_sound">到達預設電池電量的鈴聲</string>
+    <string name="settings_s_ringtone_silent">静音</string>
+    <string name="settings_t_enable_silent_period">啟用静音時段</string>
+    <string name="settings_t_silent_period">静音時段</string>
+
+    <!-- Other -->
+    <string name="pref_cat_t_other">其他</string>
+    <!-- Debug Mode -->
+    <string name="settings_t_debug_mode">調試模式</string>
+    <!-- Import/Export -->
+    <string name="pref_t_import_export">匯入/匯出</string>
+    <string name="pref_s_import_export">匯入/匯出 設定</string>
+
+    <!-- Import/Export Settings-->
+    <string name="import_export_t_export">匯出</string>
+    <string name="import_export_s_export">匯出設定</string>
+    <string name="import_export_t_import">匯入</string>
+    <string name="import_export_s_import">匯入設定</string>
+
+    <!-- Support -->
+    <string name="pref_cat_t_support">支援</string>
+    <string name="support_t_help">求助</string>
+    <string name="support_s_help">充電 LED 說明</string>
+    <string name="support_t_faq">FAQ</string>
+    <string name="support_s_faq">常見問題</string>
+
+    <!-- About -->
+    <string name="pref_cat_t_about">關於</string>
+    <string name="about_t_version">版本: %s</string>
+    <string name="about_t_license">許可證: GPL-3.0</string>
+    <string name="about_t_source_code">源編碼</string>
+    <string name="about_t_changelog">修改記錄</string>
+
+    <!-- Simple strings -->
+    <string name="dont_show_this_again">不要再顯示</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">免責聲明</string>
+
+    <!-- Time Range Picker -->
+    <string name="start_time">開始時間</string>
+    <string name="end_time">終止時間</string>
+
+</resources>

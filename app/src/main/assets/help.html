@@ -1,0 +1,196 @@
+<html>
+<body text="#eeeeee" bgcolor="#303030" link="#00ffff" vlink="#00ffff">
+
+<center><h2>Charging LED Help</h2></center>
+
+Battery <strong>Charging LED</strong> is developed and tested for the Galaxy Nexus, because the phone don't provide any indication 
+during charging. It may work on other phones (<font color="#FF0000">NO GUARANTEE</font>).<br/>
+Once the app is installed and setup, the phone's LED will blink in different colour during charging with screen off.<br/>
+<br/>
+<table border="1" align="center" cellspacing="1" cellpadding="4">
+  <tr>
+    <th>Battery Level</th>
+    <th>Colour</th>
+  </tr>
+  <tr>
+    <th>100%</th>
+    <th><font color="#00FF00">Green</font></th>
+  </tr>
+  <tr>
+    <th>95% - 99%</th>
+    <th><font color="#00FF00">Green</font> (blink)</th>
+  </tr>
+  <tr>
+    <th>90% - 94%</th>
+    <th><font color="#0000FF">Blue</font> (blink)</th>
+  </tr>
+  <tr>
+    <th>75% - 89%</th>
+    <th><font color="#FFFFFF">White</font> (blink)</th>
+  </tr>
+  <tr>
+    <th>50% - 74%</th>
+    <th><font color="#FFFF00">Yellow</font> (blink)</th>
+  </tr>
+  <tr>
+    <th>25% - 49%</th>
+    <th><font color="#9D00FF">Purple</font> (blink)</th>
+  </tr>
+  <tr>
+    <th> Below 25%</th>
+    <th><font color="#FF0000">Red</font> (blink)</th>
+  </tr>
+</table>
+<br/>
+Note:<br/>
+(i) Due to hardware limitation, the colour the LED emit may looks different.<br/>
+(ii) Not all devices support the same number of colours as the Galaxy Nexus. e.g. Some motorola devices only support one colour (white).<br/>
+(iii) Not all devices support LED blinking or not-blinking.
+<br/>
+
+
+<h3><u>Setup</u></h3>
+
+There are 3 steps to setting up this app on the Galaxy Nexus for "LED" charging notification.<br/>
+<br/>
+(1) Enable the "Monitor charging" option in app.<br/>
+(2) Enable the "Charging LED" option in app.<br/>
+(3) Enable the "Pulse notification light" option in "Settings > Display".<br/>
+<br/>
+Note:<br/>
+(i) Step (3) may not be available/requires on all devices.<br/>
+(ii) The app can operate in any combination of "LED", "Notification" and "Sound" charging notification mode.<br/>
+(iii) On devices without LED (e.g. Nexus 7) or LED not functioning as desired, the app may still be useful, as it offer sound notification.<br/>
+<br/>
+
+
+<h3><u>General settings</u></h3>
+<strong style="color: #4CC417">Monitor charging</strong>. Must be enabled for the app to works.<br/><br/>
+<strong style="color: #4CC417">Mode</strong>. Indicate the types of notification that is enabled.<br/><br/>
+Note:<br/>
+- Enable at least one type, otherwise, Monitor charging will be disabled.<br/>
+<br/>
+
+<h3><u>LED settings</u></h3>
+<strong style="color: #4CC417">Charging LED</strong>. Enable to get battery level LED notification.<br/><br/>
+<strong style="color: #4CC417">Battery level interval</strong>. Goto the define custom battery level interval screen.<br/><br/>
+<strong style="color: #4CC417">Battery level colour</strong>. Goto the define custom colour for each battery level interval screen.<br/><br/>
+<strong style="color: #4CC417">Blink rate</strong>. Goto the define LED blink rate screen.<br/><br/>
+
+<h3><u>Notification settings</u></h3>
+<strong style="color: #4CC417">Charging notification</strong>. Enable to get battery level notification reported on the system status bar.<br/><br/>
+
+<h3><u>Sound settings</u></h3>
+<strong style="color: #4CC417">Charging sound</strong>. Enable to get sound notification.<br/><br/>
+<strong style="color: #4CC417">Plugin sound</strong>. Sound played upon charging cable plugged in.<br/><br/>
+<strong style="color: #4CC417">Unplug sound</strong>. Sound played upon charging cable unplugged.<br/><br/>
+<strong style="color: #4CC417">Monitor battery level</strong>. Enable to monitor battery level.<br/><br/>
+<strong style="color: #4CC417">Battery level</strong>. The monitored battery level.<br/><br/>
+<strong style="color: #4CC417">Battery level reached sound</strong>. Sound played upon current battery level is at or above the defined "Battery level". Repeated every 5 minutes.<br/><br/>
+<strong style="color: #4CC417">Enable silent period</strong>. Enable/Disable silent period.<br/><br/>
+<strong style="color: #4CC417">Silent period</strong>. Notification without sound during the defined time period.<br/><br/>
+
+
+<h3><u>Other settings</u></h3>
+<strong style="color: #4CC417">Debug mode</strong>. Enable/disable debug mode.<br/><br/>
+<strong style="color: #4CC417">Import/Export</strong>. Import/Export the settings from/to storage.<br/><br/>
+
+
+<h3><u>Using the debug mode</u></h3>
+
+If enabled, a toast message is displayed upon the charging cable is plugged in.<br/>
+<br/>
+The purpose of this is to verify the "ACTION_POWER_CONNECTED broadcast" is recognized by the system, and the app is notified.<br/>
+For more information, see Testing below.
+<br/>
+
+
+<br/>
+<h3><u>Testing</u></h3>
+
+The app is tested on the Galaxy Nexus (GSM), results below:<br/>
+<br/>
+<u>Works</u>
+<ul>
+<li><strong>Galaxy Nexus (4.0.4)</strong></li>
+<li><strong>Galaxy Nexus (4.1.1)</strong></li>
+<li><strong>Galaxy Nexus (4.2.1)</strong></li>
+</ul>
+<u>Don't Works</u>
+<ul>
+<li><strong>Galaxy Nexus (4.0.1)</strong></li>
+<li><strong>Emulator (4.0.1)</strong></li>
+<li><strong>Emulator (4.0.3)</strong></li>
+</ul>
+The reason for the failure is because the system failed to recognize the "ACTION_POWER_CONNECTED broadcast" 
+(detect charging cable is plugged in), this is fixed in version 4.0.4.<br/>
+<br/>
+If this unfortunate event happened with your device, there is nothing I (developer of this app) can do. I had to wait 
+until my Nexus is upgraded to 4.0.4 before I can see it working on a real device. Your best bet is to email your device's manufacturer, 
+and see if they will release a firmware update.
+<br/>
+
+
+<br/>
+<h3><u>Information that may help for your devices</u></h3>
+<u><font color="#FFFF00">*** For Nexus 5X users on Android 7 ***</font></u><br/>
+<br/>1 - Goto "Settings > System UI Tuner > Other > Power Notification Controls" and turn it on.
+<br/>2 - Goto "Settings > Notifications > Charging LED" and change the notification level from Auto (tap on the 'A') to Level 4 (one level higher to the right).
+<br/>
+<br/>Note:
+<br/>- The above options may also exists on different devices, so take a look yourself.
+
+<br/><br/>
+<u><font color="#FFFF00">*** For Android 7.1.1 (Lineage OS) ***</font></u><br/>
+<br/>Try set notifications to be at least level 4.
+<br/>This may also apply to all Android 7. So give it a check.
+
+<br/><br/>
+<u><font color="#FFFF00">*** For Samsung Galaxy S3 users ***</font></u><br/>
+<br/>The GS3 actually have a built in charging LED indicator option.
+<br/>The app maybe having conflict with this option, try disable this first. "Setting > LED indicator > Charging".
+<br/>As I don't have access to a GS3, you will have to test it yourself.
+<br/>
+
+
+<br/>
+<h3><u>How does this type of app work</u></h3>
+
+I know two methods.<br/>
+<br/>
+<u><font color="#FFFF00">Method 1</font></u>
+<br/>
+(a) System detect charging cable is plugged in.<br/>
+(b) Start service to blink LED.<br/>
+(c) Detect charging cable is unplugged.<br/>
+(d) Stop service, stop LED blinking.<br/>
+<br/>
+<u><font color="#FFFF00">Method 2</font></u>
+<br/>
+(a) Service (running in background) to monitor charging.<br/>
+(b) Start LED blinking, if charging.<br/>
+(c) Stop LED blinking, if stop charging.<br/>
+<br/>
+As method 2 does not rely on system detecting "ACTION_POWER_CONNECTED broadcast" to start a service, it should work on more devices, but it requires a service running constantly in the background.
+<br/><br/>
+This app uses method 1, because similar apps I found in Play Store uses method 2, and I don't want a service constantly running in the background, also, all I needs is a charging indicator.
+<br/><br/>
+Given how this app work, if you do rate this app in Play Store, positive or negative, please include your device type (Model number) and os version (Android version).
+<br/>
+To find this information, goto "Settings > About phone".
+<br/>
+<br/>Tap <a href="https://play.google.com/store/apps/details?id=hk.ChargingLED">here</a> to rate this app in Play Store.
+<br/>
+
+
+<br/>
+<h3><u>Distribution</u></h3>
+
+This version of this application may be distributed as long as:
+<br/>(1) The apk file and its content is unmodified.
+<br/>(2) Do not charge or collect any monetary or other compensation for or in connection with this application.
+<br/>
+
+
+</body>
+</html>

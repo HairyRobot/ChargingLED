@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Charging LED</string>
+
+    <!-- Button label -->
+    <string name="btn_accept">Accept</string>
+    <string name="btn_reject">Reject</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_ok">OK</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_retry">Retry</string>
+
+    <!-- Toast message -->
+    <string name="power_connected">Power connected</string>
+    <string name="power_disconnected">Power disconnected</string>
+    <string name="settings_not_found">Config file not found</string>
+    <string name="settings_imported">Settings imported</string>
+
+    <!-- Notification Channel -->
+    <string name="channel_name_foreground_service_status">Foreground service status</string>
+    <string name="channel_name_uncategorized">Uncategorized</string>
+
+    <!-- Notification message -->
+    <string name="charging">Charging</string>
+    <string name="charging_completed">Charging completed</string>
+    <string name="battery_level_reached">Battery level reached</string>
+    <string name="foreground_service_see_faq">Foreground service. See FAQ.</string>
+
+    <!-- Alert dialog message -->
+    <string name="alert_title_permission_denied">Permission denied</string>
+    <string name="alert_msg_storage_denied">Without this permission the app is unable to read/write storage. Are you sure you want to deny this permission?</string>
+    <string name="alert_title_storage_denied_never_ask">Unable to read/write storage</string>
+    <string name="alert_msg_storage_denied_never_ask">You have denied the permission for storage. Please goto app settings and allow permission.</string>
+    <string name="alert_title_ignore_battery_optimization">Ignore battery optimizations</string>
+    <string name="alert_msg_ignore_battery_optimization">Please consider adding ChargingLED to the \"Don\'t optimize\" list, otherwise, the app may not function. See FAQ for more information.</string>
+
+    <!-- General settings -->
+    <string name="pref_cat_t_settings">Settings</string>
+    <!-- Monitor charging -->
+    <string name="settings_t_monitor_charging">Monitor charging</string>
+    <string name="settings_s_disabled">Disabled</string>
+    <string name="settings_s_enabled">Enabled</string>
+    <!-- Mode -->
+    <string name="settings_t_mode">Mode</string>
+    <string name="settings_s_led">LED</string>
+    <string name="settings_s_notification">Notification</string>
+    <string name="settings_s_sound">Sound</string>
+
+    <!-- LED settings -->
+    <string name="pref_cat_t_led_settings">LED settings</string>
+    <!-- Charging LED -->
+    <string name="settings_t_charging_led">Charging LED</string>
+    <!-- Custom battery level interval -->
+    <string name="settings_t_battery_level_interval">Battery level interval</string>
+    <string name="settings_s_battery_level_interval">Define battery level interval</string>
+    <!-- Reset default battery level interval -->
+    <string name="battery_level_t_default_battery_level_interval">Default battery level interval</string>
+    <string name="battery_level_s_default_battery_level_interval">Reset to default battery level interval</string>
+    <!-- Battery level colour -->
+    <string name="settings_t_battery_level_color">Battery level colour</string>
+    <string name="settings_s_battery_level_color">Define battery level colour</string>
+    <!-- Blink rate -->
+    <string name="settings_t_blink_rate">Blink rate</string>
+    <string name="settings_s_blink_rate">Define blinking rate</string>
+
+    <!-- Custom battery level colour -->
+    <string name="battery_level_t_range_below">Below %s</string>
+    <!-- Reset default battery level colour -->
+    <string name="battery_level_t_default_battery_level_color">Default battery level colour</string>
+    <string name="battery_level_s_default_battery_level_color">Reset to default battery level colour</string>
+
+    <!-- Custom blink rate -->
+    <string name="blink_rate_s_range_enabled">LED blink</string>
+    <string name="blink_rate_s_range_disabled">LED always lit</string>
+    <string name="blink_rate_t_range_1_on">LED on interval</string>
+    <string name="blink_rate_t_range_1_off">LED off interval</string>
+    <string name="blink_rate_t_range_2_on">LED on interval</string>
+    <string name="blink_rate_t_range_2_off">LED off interval</string>
+    <!-- Reset default blink rate -->
+    <string name="blink_rate_t_default_blink_rate">Default blink rate</string>
+    <string name="blink_rate_s_default_blink_rate">Reset to default blinking rate</string>
+
+    <!-- Notification settings -->
+    <string name="pref_cat_t_notification_settings">Notification settings</string>
+    <string name="settings_t_charging_notification">Charging notification</string>
+
+    <!-- Sound settings -->
+    <string name="pref_cat_t_sound_settings">Sound settings</string>
+    <string name="settings_t_charging_sound">Charging sound</string>
+    <string name="settings_t_plugin_sound">Plugin sound</string>
+    <string name="settings_t_unplug_sound">Unplug sound</string>
+    <string name="settings_t_monitor_battery_level">Monitor battery level</string>
+    <string name="settings_t_battery_level">Battery level</string>
+    <string name="settings_t_battery_level_reached_sound">Battery level reached sound</string>
+    <string name="settings_s_ringtone_silent">Silent</string>
+    <string name="settings_t_enable_silent_period">Enable silent period</string>
+    <string name="settings_t_silent_period">Silent period</string>
+
+    <!-- Other -->
+    <string name="pref_cat_t_other">Other</string>
+    <!-- Debug Mode -->
+    <string name="settings_t_debug_mode">Debug mode</string>
+    <!-- Import/Export -->
+    <string name="pref_t_import_export">Import/Export</string>
+    <string name="pref_s_import_export">Import/Export settings</string>
+
+    <!-- Import/Export Settings-->
+    <string name="import_export_t_export">Export</string>
+    <string name="import_export_s_export">Export settings</string>
+    <string name="import_export_t_import">Import</string>
+    <string name="import_export_s_import">Import settings</string>
+
+    <!-- Support -->
+    <string name="pref_cat_t_support">Support</string>
+    <string name="support_t_help">Help</string>
+    <string name="support_s_help">Charging LED help</string>
+    <string name="support_t_faq">FAQ</string>
+    <string name="support_s_faq">Frequently asked questions</string>
+
+    <!-- About -->
+    <string name="pref_cat_t_about">About</string>
+    <string name="about_t_version">Version: %s</string>
+    <string name="about_t_license">License: GPL-3.0</string>
+    <string name="about_s_license">http://www.gnu.org/licenses/</string>
+    <string name="about_t_source_code">Source code</string>
+    <string name="about_s_source_code">https://github.com/HairyRobot/ChargingLED</string>
+    <string name="about_t_changelog">Changelog</string>
+
+    <!-- Simple strings -->
+    <string name="dont_show_this_again">Don\'t show this again</string>
+
+    <!-- Disclaimer -->
+    <string name="disclaimer_title">Disclaimer</string>
+
+    <!-- Time Range Picker -->
+    <string name="start_time">Start time</string>
+    <string name="end_time">End time</string>
+
+</resources>

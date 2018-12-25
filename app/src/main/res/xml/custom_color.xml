@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_t_battery_level_color">
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_GREEN"
+            android:key="batteryLevelRange1"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_GREEN"
+            android:key="batteryLevelRange2"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_BLUE"
+            android:key="batteryLevelRange3"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_WHITE"
+            android:key="batteryLevelRange4"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_YELLOW"
+            android:key="batteryLevelRange5"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_PURPLE"
+            android:key="batteryLevelRange6"
+            />
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:defaultValue="@integer/COLOR_RED"
+            android:key="batteryLevelRange7"
+            />
+
+        <PreferenceScreen
+            android:summary="@string/battery_level_s_default_battery_level_color"
+            android:title="@string/battery_level_t_default_battery_level_color"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

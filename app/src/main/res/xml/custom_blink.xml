@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/settings_t_blink_rate">
+
+        <CheckBoxPreference
+            android:key="enabledBlinking1"
+            />
+        <ListPreference
+            android:dependency="enabledBlinking1"
+            android:dialogTitle="@string/blink_rate_t_range_1_on"
+            android:entries="@array/blink_interval_name"
+            android:entryValues="@array/blink_interval_code"
+            android:key="blinkOn1"
+            android:title="@string/blink_rate_t_range_1_on"
+            />
+        <ListPreference
+            android:dependency="enabledBlinking1"
+            android:dialogTitle="@string/blink_rate_t_range_1_off"
+            android:entries="@array/blink_interval_name"
+            android:entryValues="@array/blink_interval_code"
+            android:key="blinkOff1"
+            android:title="@string/blink_rate_t_range_1_off"
+            />
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="enabledBlinking2"
+            />
+        <ListPreference
+            android:dependency="enabledBlinking2"
+            android:dialogTitle="@string/blink_rate_t_range_2_on"
+            android:entries="@array/blink_interval_name"
+            android:entryValues="@array/blink_interval_code"
+            android:key="blinkOn2"
+            android:title="@string/blink_rate_t_range_2_on"
+            />
+        <ListPreference
+            android:dependency="enabledBlinking2"
+            android:dialogTitle="@string/blink_rate_t_range_2_off"
+            android:entries="@array/blink_interval_name"
+            android:entryValues="@array/blink_interval_code"
+            android:key="blinkOff2"
+            android:title="@string/blink_rate_t_range_2_off"
+            />
+
+        <PreferenceScreen
+            android:summary="@string/blink_rate_s_default_blink_rate"
+            android:title="@string/blink_rate_t_default_blink_rate"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

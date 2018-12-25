@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Battery level colour -->
+    <string name="settings_t_battery_level_color">Battery level color</string>
+    <string name="settings_s_battery_level_color">Define battery level color</string>
+
+    <!-- Reset default battery level colour -->
+    <string name="battery_level_t_default_battery_level_color">Default battery level color</string>
+    <string name="battery_level_s_default_battery_level_color">Reset to default battery level color</string>
+
+</resources>

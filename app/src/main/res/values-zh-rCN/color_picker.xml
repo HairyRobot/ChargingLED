@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color Picker -->
+    <string name="cp_dialog_color_picker">选择颜色</string>
+    <string name="cp_press_color_to_apply">按採用的颜色</string>
+</resources>

@@ -1,0 +1,280 @@
+<html>
+<body text="#eeeeee" bgcolor="#303030" link="#00ffff" vlink="#00ffff">
+
+<center><h2>Frequently Asked Questions</h2></center>
+
+
+<a name="general_top"></a>
+<h3><u>General</u></h3>
+1. <a href="#general_001">I like the app, but it does not work on my device, can you add support for my device?</a><br/>
+2. <a href="#general_002">The app not working on my device.</a><br/>
+3. <a href="#general_003">The app stop working after "some action/change".</a><br/>
+4. <a href="#general_004">I want to input the exact LED colour code, instead of using the colour picker.</a><br/>
+5. <a href="#general_005">The app stop working after rebooting the device with the charging cable connected.</a><br/>
+6. <a href="#general_006">The "always lit" option don't works.</a><br/>
+7. <a href="#general_007">What are the different Mode.</a><br/>
+8. <a href="#general_008">The blink interval does not match the specified ms.</a><br/>
+9. <a href="#general_009">Why is the LED only blink while screen is off.</a><br/>
+10. <a href="#general_010">I get two different ringtone on plugging or unplugging the charging cable.</a><br/>
+11. <a href="#general_011">I not getting any notification (LED/Status/Sound) from the ChargingLED app.</a><br/>
+12. <a href="#general_012">The sound notification does not repeat.</a><br/>
+13. <a href="#general_013">Why do I get the "Unplug sound" upon plugging in the charge cable?</a><br/>
+14. <a href="#general_014">I enabled [LED(on), Notification(off), Sound(off)], but still see notification on the status bar?</a><br/>
+15. <a href="#general_015">I selected a ringtone, but the app show "???".</a><br/>
+16. <a href="#general_016">Why is there two ChargingLED icon on the notification status bar?</a><br/>
+17. <a href="#general_017">What is Doze Mode?</a><br/>
+18. <a href="#general_018">Why is there a delay in detecting charging cable plugged in?</a><br/>
+<br/>
+<hr/>
+
+
+<a name="general_001"></a>
+<b style="color: #4CC417">I like the app, but it does not work on my device, can you add support for my device?</b><br/>
+<br/>No. Reasons below.
+<br/>
+<br/>- The app uses only standard API to detect charging cable plugged in, and to control the LED. No hack or special method is used.
+<br/>- The app is hardware dependent. There are many Android devices, this developer possess just one of them.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_002"></a>
+<b style="color: #4CC417">The app not working on my device.</b><br/>
+<br/>There are many possible reasons, see below. (list is NOT exhaustive)
+<br/>
+<br/><font color="#FFFF00">(1)</font> Many devices have inbuild charging led flashing function that cannot be override using standard API.
+Some devices do allows users to disable it via Settings, for example the Samsung Galaxy S3, check you device to confirm.
+<br/>
+<br/><font color="#FFFF00">(2)</font> <strike>Android 4.2 Jelly Bean introduced the "Daydream" screen saver that appears when a device is either docked or charging.
+It conflict with the app, if you want ChargingLED, then disable the screen saver in Settings.</strike>
+<br/>Note:
+<br/>- Comments in Play Store reported "Daydream" does not conflict with ChargingLED.
+<br/>
+<br/><font color="#FFFF00">(3)</font> System (Android) is not detecting the "ACTION_POWER_CONNECTED broadcast".
+<br/>To check this, enable "Debug mode" in app's settings, once enabled a toast "Power Connected" message is displayed whenever the charging cable is plugged in.
+If no message is displayed, and you confirmed there is no software conflict, then this mean the system is not detecting "ACTION_POWER_CONNECTED broadcast" which the app depends on.
+Your best action is to email your device's manufacturer, and see if they will release a firmware update to fix the problem.
+<br/>
+<br/><font color="#FFFF00">(4)</font> There is a software conflict with other installed apps.
+Check your installed apps for app that like ChargingLED also manipulate the system upon receiving "ACTION_POWER_CONNECTED broadcast".
+Once found, disable or uninstall those app in conflict.
+<br/>The process is more optimistic if someone reported ChargingLED does works on your device, otherwise, your effort may just confirm it does not works
+on your device. Whatever the result, it would be helpful to other users to post your finding in Play Store comments (stating the device and os version).
+<br/>Note:
+<br/>- There is no easy way to determine the conflicting app, except checking each combination.
+<br/>- Example of conflicting apps: any apps that also try to control the LED. e.g. Light Flow.
+<br/>
+<br/><font color="#FFFF00">(5)</font> The device itself may have built in charging LED indicator option, and is in conflict with this app.
+<br/>For example, GS3 got this option located at "Settings > LED indicator > Charging".
+<br/>
+<br/><font color="#FFFF00">(6)</font> On some devices, the LED flashing don't start until the screen is off and the charge level changed since screen is off.
+<br/>For example, GS4 (LineageOS).
+<br/>
+<br/>Important Note:
+<br/>- Hardware very from device to device, it is not possible to support all devices. Not even app like Light Flow works on all devices.
+<br/>- ChargingLED is written using standard API, nothing special is used in the coding, if it doesn't works on your device, there is really not much I can do.
+<br/>- See FAQ 10, 11, 12, 17 & 18 for more information.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_003"></a>
+<b style="color: #4CC417">The app stop working after "some action/change".</b><br/>
+<br/>See FAQ 2.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_004"></a>
+<b style="color: #4CC417">I want to input the exact LED colour code, instead of using the colour picker.</b><br/>
+<br/>There is no dedicated function for this, but advanced users can edit the exported config file "ChargingLED.ini", then import the new config back into the app to achieve this.
+<br/>
+<br/>Note:
+<br/>- The config file is commented to easily identify each charge level, anyone still not sure how to make the necessary change is advised to use the colour picker.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_005"></a>
+<b style="color: #4CC417">The app stop working after rebooting the device with the charging cable connected.</b><br/>
+<br/>As at v0.2.0, added code to achieve this, and without having a constantly running service.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_006"></a>
+<b style="color: #4CC417">The "always lit" option don't works.</b><br/>
+<br/>The default settings for "always lit" is 0/1 ms (off/on).
+<br/>On some device (e.g. Nexus 5) this don't play well.
+<br/>You can play with the blink settings to try to simulate the best settings for your device.
+<br/>
+<br/>e.g. (off/on)
+<br/>1) 0/0 - Strange, this actually produce "always lit" on Galaxy Nexus.
+<br/>2) 0/30000
+<br/>3) Your combination here.
+<br/>
+<br/>Note:
+<br/>- If you can't achieve the desire "always lit" result, there is really not much I can do, as blinking/lit is defined by those two parameters.
+<br/>- The hardware will not keep the LED "always lit" if it does not support this.
+<br/>- To enter ms outside those provided, you can do it via the exported "ChargingLED.ini" config file.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_007"></a>
+<b style="color: #4CC417">What are the different Mode.</b><br/>
+<br/>"LED" - flash LED according to charging status
+<br/>"Notification" - display charging status notification on the system status bar
+<br/>"Sound" - sound ringtone (notification) on reaching defined charging status
+<br/>
+<br/>Note:
+<br/>- "Notification" and "Sound" maybe useful on devices that does not have LED or LED don't fully works.
+<br/>- Enable at least one mode, otherwise, app will be disabled.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_008"></a>
+<b style="color: #4CC417">The blink interval does not match the specified ms.</b><br/>
+<br/>ChargingLED will call the corresponding API with the specified ms, but whether the LED will blink for the specified ms is dependent on the hardware.
+<br/>
+<br/>Note:
+<br/>- The hardware cannot blink the LED longer then it can support.
+<br/>- The hardware cannot keep the LED "always lit" if it does not support this.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_009"></a>
+<b style="color: #4CC417">Why is the LED only blink while screen is off.</b><br/>
+<br/>The LED blink only while screen is off is a system constraint.
+<br/>ChargingLED does not programmatically switch off the LED while screen is on.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_010"></a>
+<b style="color: #4CC417">I get two different ringtone on plugging or unplugging the charging cable.</b><br/>
+<br/>The additional ringtone is likely generated by Android, check "Charging sounds" option at "Settings > Sound & notification > Other sounds".
+<br/>
+<br/>Decide if ChargingLED or Android should be responsible for playing the ringtone, and enable/disable accordingly.
+<br/>
+<br/>Note:
+<br/>- Above system settings is introduced in Android 6.0 (Marshmallow), and may differ slightly in newer Android, so just look for something similar.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_011"></a>
+<b style="color: #4CC417">I not getting any notification (LED/Status/Sound) from the ChargingLED app.</b><br/>
+<br/>Check if notification is blocked by the system.
+<br/>
+<br/>Goto "Settings > Sound & notification > App notifications", then select "ChargingLED", then check notification from ChargingLED is not blocked/disabled.
+<br/>
+<br/>Note:
+<br/>- Above system settings is introduced in Android 6.0 (Marshmallow), and may differ slightly in newer Android, so just look for something similar.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_012"></a>
+<b style="color: #4CC417">The sound notification does not repeat.</b><br/>
+<br/>The sound notification is repeated only if during charging the battery level is maintained at or above the defined "Battery level" setting.
+<br/>The scheduled repeat sound notification will get cancel, if the battery level drop below the defined "Battery level" setting.
+<br/>
+<br/>For some reason, on my Galaxy Nexus, the device fully charge the battery to 100% as reported by Android, on continue charging, Android would then report 99%, and sometime may not report 100% again, so to ensure I get the repeat sound notification, I set the "Battery level" to 99%.
+<br/>
+<br/>Note:
+<br/>- Enable "Charging notification" to see the current battery level as reported by Android.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_013"></a>
+<b style="color: #4CC417">Why do I get the "Unplug sound" upon plugging in the charge cable?</b><br/>
+<br/>The "Unplug sound" is played upon the app receiving the unplugged signal from Android.
+<br/>
+<br/>You can confirm this by setting the app to debug mode, which if enabled, will display a toast message upon receiving the following signal from Android:
+<br/>
+<br/>- a charge cable plugged in
+<br/>- a charge cable unplugged
+<br/>
+<br/>Therefore, the likely reason is following events happened:
+<br/>
+<br/>(1) Plugin the charge cable
+<br/>(2) the app received a charge cable plugged in signal from Android. (Play sound as appropriate)
+<br/>(3) the app received a charge cable unplugged signal from Android. (Play sound as appropriate)
+<br/>(4) the app received a charge cable plugged in signal from Android. (Play sound as appropriate)
+<br/>
+<br/>As to why (3) and (4) happened, that is a question for Android.
+<br/>
+<br/>Note:
+<br/>- Similar would happen if "Plugin sound" is enabled.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_014"></a>
+<b style="color: #4CC417">I enabled [LED(on), Notification(off), Sound(off)], but still see notification on the status bar?</b><br/>
+<br/>After the release of v0.3.0, users started reporting app fc when LED is enabled on some devices.
+<br/>
+<br/>After some investigation, the problem maybe related to the changes on the notification API, and me bumping minSdkVersion to 15 from 7 may have broken the app on some devices, those apparently not my test devices.
+<br/>
+<br/>I believe Play Store only allow app to more forward, i.e. once an app support a higher API, it can't go back and not support it, because Play Store will not accept the new apk file.
+<br/>
+<br/>The remedy to the situation is to have notification on the status bar when LED is enabled.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_015"></a>
+<b style="color: #4CC417">I selected a ringtone, but the app show "???".</b><br/>
+<br/>The "???" indicate a fc caused by SecurityException occurred.
+<br/>This happen when the selected ringtone is from external storage and the app is not granted the READ_EXTERNAL_STORAGE permission. As READ_EXTERNAL_STORAGE permission is requested in manifest, this affect devices on API >= 23 (Marshmallow).
+<br/>
+<br/>To remedy the situation, either
+<br/>
+<br/>(1) do a settings export, this will prompt user to grant the require storage permission.
+<br/>(2) goto the ChargingLED app info screen and manually grant it storage permission.
+<br/><br/><a href="#general_top">Top</a><br/>
+<hr/>
+
+<a name="general_016"></a>
+<b style="color: #4CC417">Why is there two ChargingLED icon on the notification status bar?</b><br/>
+<br/>As of Android 8.0 (Oreo), if an app is targeted API-26 or above, a service needs to run in the foreground, to achieve this, a foreground notification is needed, hence the extra ChargingLED icon on the notification status bar.
+<br/>
+<br/>To stop the foreground notification from showing on the status bar, follow below steps:
+<br/>(1) goto the App info screen of ChargingLED.
+<br/>(2) tap on "App notifications".
+<br/>(3) switch off the "Foreground service status" notification.
+<br/>
+<br/>Note:
+<br/>- If you have apps killer running on your device, ensure to exclude ChargingLED from its kill list.
+<br/><br/><a href="#general_top">Top</a><br/>
+
+<a name="general_017"></a>
+<b style="color: #4CC417">What is Doze Mode?</b><br/>
+<br/>In Android 6.0 (Marshmallow), the Doze Mode was introduced to prevents certain tasks from running if your device is in idle state, this is to reduce power consumption by deferring background CPU and network activity for applications.
+<br/>
+<br/>This may cause ChargingLED to stop working, because the app uses some of the Doze mode restricted functions (wake lock, AlarmManager, JobScheduler).
+<br/>If app is affected, consider excluding the app from battery optimization to allows timely execution of required functions.
+<br/>
+<br/>Follow below steps to exclude app from optimization:
+<br/>(1) goto the App info screen of ChargingLED.
+<br/>(2) tap on "Battery" to goto the Battery usage screen.
+<br/>(3) tap on "Battery optimization" to goto the Battery optimization screen.
+<br/>(4) filter for "All apps".
+<br/>(5) locate ChargingLED, then tap it to select.
+<br/>(6) select "Don't optimize".
+<br/>
+<br/>or from System settings with below steps:
+<br/>(1) goto System settings.
+<br/>(2) tap on "Battery" to goto Battery screen.
+<br/>(3) select "Battery optimization" from the menu bar to goto the Battery optimization screen.
+<br/>(4) filter for "All apps".
+<br/>(5) locate ChargingLED, then tap it to select.
+<br/>(6) select "Don't optimize".
+<br/>
+<br/>Note:
+<br/>- ChargingLED only run during the device is charging, once the charging cable is unplugged, the app terminate, including any background service.
+<br/><br/><a href="#general_top">Top</a><br/>
+
+<a name="general_018"></a>
+<b style="color: #4CC417">Why is there a delay in detecting charging cable plugged in?</b><br/>
+<br/>On Android 8.0 (Oreo) or above, due to "Background execution limits" introduced to improve battery life, Android no longer register broadcast receivers for implicit broadcasts in the manifest, this mean ChargingLED may take up to 3-4 minutes before receiving the signal from Android that it detected USB cable plugged in for charging.
+<br/>
+<br/>This delay would affect the "Plugin sound" function, others functions should function as normal once charging is detected.
+<br/>
+<br/>Note:
+<br/>- This does not affect any apps that detect "ACTION_POWER_CONNECTED" in a service, since ChargingLED is designed specifically to avoid a constantly running service, it is something that can't be avoided.
+<br/><br/><a href="#general_top">Top</a><br/>
+
+
+</body>
+</html>

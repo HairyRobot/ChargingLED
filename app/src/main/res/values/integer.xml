@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="COLOR_RED">0xFFFF0000</integer>
+    <integer name="COLOR_GREEN">0xFF00FF00</integer>
+    <integer name="COLOR_BLUE">0xFF0000FF</integer>
+    <integer name="COLOR_YELLOW">0xFFFFFF00</integer>
+    <integer name="COLOR_PURPLE">0xFF9D00FF</integer>
+    <integer name="COLOR_WHITE">0xFFFFFFFF</integer>
+</resources>
